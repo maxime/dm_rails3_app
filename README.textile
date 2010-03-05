@@ -20,4 +20,4 @@ Added:
   :persisted? => true
 </pre>
 
-to the view specs in order to make polymorphic\_url treat the objects as saved objects (new_record? == false).
+to the view specs in order to make polymorphic\_url treat the objects as saved objects (new\_record? == false).
