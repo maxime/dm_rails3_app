@@ -1,0 +1,23 @@
+That's an application initially generated with the command:
+
+<pre>
+  rails dm_rails3_app -m http://github.com/snusnu/rails-templates/raw/master/dm_rails_master.rb
+</pre>
+
+I had to add / modify a couple of things to get it the spec passes.
+
+Added:
+
+<pre>
+  ActionController::Base.allow_forgery_protection = false
+</pre>
+
+to config/environments/test.rb.
+
+Added:
+
+<pre>
+  :persisted? => true
+</pre>
+
+to the view specs in order to make polymorphic\_url treat the objects as saved objects (new_record? == false).

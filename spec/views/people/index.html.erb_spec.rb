@@ -5,14 +5,14 @@ describe "people/index.html.erb" do
 
   before(:each) do
     assign(:people, [
-      stub_model(Person, :name => "Maxime", :persisted? => true),
-      stub_model(Person, :name => "Scott", :persisted? => true),
+      stub_model(Person, :name => "Bob", :persisted? => true),
+      stub_model(Person, :name => "Ellie", :persisted? => true),
     ])
   end
 
   it "renders a list of people" do
     render
-    response.should have_selector("tr>td", :content => "Maxime")
-    response.should have_selector("tr>td", :content => "Scott")
+    response.should have_selector("tr>td", :content => "Bob")
+    response.should have_selector("tr>td", :content => "Ellie")
   end
 end
